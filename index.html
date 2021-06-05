@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toy town</title>
+
+    <!-- VENDORS -->
+    <script
+      defer
+      src="https://kit.fontawesome.com/a4eb31c874.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Work Sans:300,400,500,600,700,800"
+      rel="stylesheet"
+    />
+
+    <!-- MY DEFINED -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <script defer src="/js/app.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__upper">
+        <ul class="header__social">
+          <a href="#" class="header__social-link">
+            <span class="fab fa-facebook-f"></span>
+          </a>
+          <a href="#" class="header__social-link">
+            <span class="fab fa-instagram"></span>
+          </a>
+          <a href="#" class="header__social-link">
+            <span class="fab fa-twitter"></span>
+          </a>
+          <a href="#" class="header__social-link">
+            <span class="fab fa-pinterest-p"></span>
+          </a>
+          <a href="#" class="header__social-link">
+            <span class="fab fa-tumblr"></span>
+          </a>
+        </ul>
+        <div class="header__contact">
+          <div class="header__email">
+            <span class="far fa-envelope"></span>info@gmail.com
+          </div>
+          <button class="btn btn--red">My Account</button>
+        </div>
+      </div>
+      <nav class="header__nav">
+        <div class="header__btns">
+          <button class="btn btn--toggler">
+            <span class="fa fa-bars"></span>
+          </button>
+          <button class="btn btn--yellow">
+            <span class="fa fa-search"></span>
+          </button>
+        </div>
+        <ul class="list list--1 list--row">
+          <a href="#" class="list__link">Toy</a>
+          <a href="#" class="list__link">Collection</a>
+          <a href="#" class="list__link">
+            Kids<span class="list__marker list__marker--sale">Sale</span>
+          </a>
+          <a href="#" class="list__link"
+            >Accesories<span class="list__marker list__marker--new"
+              >New</span
+            ></a
+          >
+        </ul>
+        <figure class="header__logo">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0199/7497/9684/files/little_baby_large.png?v=1621600430"
+            alt="LOGO"
+            class="header__logo-img"
+          />
+        </figure>
+        <ul class="list list--2 list--row">
+          <a href="#" class="list__link">Include Pages</a>
+          <a href="#" class="list__link">Blog</a>
+          <a href="#" class="list__link">
+            About Us<span class="list__marker list__marker--new">New</span>
+          </a>
+          <a href="#" class="list__link">
+            Accesories<span class="list__marker list__marker--hot">Hot</span>
+          </a>
+        </ul>
+        <button class="btn btn--yellow">
+          <span class="fa fa-shopping-cart"></span>
+        </button>
+      </nav>
+      <div class="swiper-container homeSwiper">
+        <div class="swiper-wrapper">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0199/7497/9684/files/Slider-2_e56703d4-fe9d-484a-90f8-b7ac575a6589_2048x.png?v=1548406668"
+            alt="Full page Image"
+            class="swiper-slide"
+          />
+          <img
+            src="https://cdn.shopify.com/s/files/1/0199/7497/9684/files/Slider-1_28bec7bc-9944-433f-86c2-1a9fb40e6195_2048x.png?v=1548406656"
+            alt="Full page Image"
+            class="swiper-slide"
+          />
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </header>
+  </body>
+</html>

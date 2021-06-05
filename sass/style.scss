@@ -30,7 +30,7 @@ body {
 // *** HEADER
 .header {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   padding: 0 1rem;
 
@@ -111,7 +111,7 @@ body {
     align-items: center;
     padding: 0.5rem;
     border-radius: 20rem;
-    background: #fff;
+    background-color: #fff;
 
     .btn--toggler {
       font-size: 2rem;
@@ -166,6 +166,157 @@ body {
     @media only screen and (max-width: 68.75em) {
       width: 110%;
     }
+  }
+}
+.trending {
+  padding: 8rem 0;
+
+  &__heading {
+    text-align: center;
+    font-size: 3.2rem;
+    letter-spacing: 2px;
+    color: $color-red;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  &__slogan {
+    text-align: center;
+    color: #999;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+  .list {
+    justify-content: center;
+    gap: 1rem;
+
+    @media only screen and (max-width: 37.5em) {
+      flex-direction: column;
+    }
+  }
+  &__trends {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    gap: 1rem;
+
+    @media only screen and (max-width: 56.25em) {
+      width: 90%;
+    }
+    @media only screen and (max-width: 37.5em) {
+      width: 96%;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
+.features {
+  background: url(https://cdn.shopify.com/s/files/1/0199/7497/9684/files/Paralax.png?v=1574677119)
+    no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    background-size: cover;
+    height: 9.4rem;
+    background-repeat: no-repeat;
+    background-image: url(https://cdn.shopify.com/s/files/1/0199/7497/9684/t/12/assets/service-pattern.png?v=6915703087085917494);
+  }
+  &::after {
+    transform: rotateX(180deg);
+  }
+  &__width {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 10rem 0;
+
+    @media only screen and (max-width: 56.25em) {
+      width: 90%;
+    }
+    @media only screen and (max-width: 37.5em) {
+      width: 96%;
+    }
+    .swiper-wrapper {
+      padding: 4rem 2rem;
+    }
+  }
+}
+.feature {
+  border: 2px dotted #ddd;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  padding: 7.2rem 3rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 200rem;
+  transition: border 0.3s ease;
+
+  &:hover {
+    border: 2px solid $color-red;
+  }
+  &:hover &__title {
+    letter-spacing: 2px;
+  }
+  & > *:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+
+  &__image {
+    width: 6rem;
+  }
+  &__title {
+    transition: letter-spacing 0.3s ease;
+  }
+}
+// components
+.trend {
+  border-radius: 3rem;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  flex: 0 0 25%;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+  }
+  &:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  &:hover &__image {
+    transform: scale(1.1);
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  &--big {
+    flex: 0 0 45%;
+  }
+  &--huge {
+    flex: 0 0 100%;
+    order: 1;
   }
 }
 .list {
@@ -244,7 +395,7 @@ body {
   cursor: pointer;
   font-size: 1.6rem;
   border-radius: 20rem;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 
   &--red {
     color: white;
@@ -267,6 +418,19 @@ body {
       color: white;
     }
   }
+  &--trending {
+    border: 2px dotted #ddd;
+    padding: 1rem 2rem;
+    color: #777;
+
+    &:hover,
+    &:focus,
+    &-active {
+      color: #222;
+      background-color: $color-yellow;
+      border: 2px solid $color-red;
+    }
+  }
 }
 .homeSwiper {
   position: absolute;
@@ -278,4 +442,72 @@ body {
 }
 .swiper-slide {
   object-fit: cover;
+}
+.productsSwiper {
+  width: 80%;
+  margin: auto;
+
+  @media only screen and (max-width: 56.25em) {
+    width: 90%;
+  }
+  @media only screen and (max-width: 37.5em) {
+    width: 96%;
+  }
+  .swiper-wrapper {
+    padding: 4rem 2rem;
+  }
+}
+
+.slide {
+  width: 48rem;
+  position: relative;
+  border-radius: 3rem;
+  overflow: hidden;
+  background-color: #f6f7f8;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px dotted #ddd;
+  transition: border 0.3s ease;
+
+  &:hover {
+    border: 2px solid $color-red;
+  }
+
+  &__image {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  &__image--rotated {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: perspective(75rem) rotateY(90deg);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  &:hover &__image--rotated {
+    opacity: 1;
+    transform: perspective(75rem) rotateY(0deg);
+  }
+  &__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+  &__title {
+    font-weight: normal;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  .list {
+    color: #ddd;
+    margin-bottom: 1rem;
+  }
+  &__price {
+    color: $color-red;
+  }
 }

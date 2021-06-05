@@ -249,6 +249,139 @@ body {
     }
   }
 }
+.news {
+  padding: 5rem 0;
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: min-content 1fr min-content;
+  gap: 4rem 1rem;
+  grid-template-areas:
+    "news-title product-title"
+    "news large-swiper"
+    "newsletter small-swiper";
+
+  @media only screen and (max-width: 68.75em) {
+    grid-template-rows: min-content auto min-content auto min-content;
+    grid-template-areas:
+      "news-title news-title"
+      "news news"
+      "product-title product-title"
+      "large-swiper large-swiper"
+      "newsletter small-swiper";
+  }
+
+  @media only screen and (max-width: 56.25em) {
+    width: 90%;
+  }
+  @media only screen and (max-width: 37.5em) {
+    width: 96%;
+    grid-template-rows: min-content auto min-content auto min-content min-content;
+    grid-template-areas:
+      "news-title news-title"
+      "news news"
+      "product-title product-title"
+      "large-swiper large-swiper"
+      "newsletter newsletter"
+      "small-swiper small-swiper";
+  }
+
+  &__title {
+    color: $color-red;
+    font-size: 3.2rem;
+    margin-bottom: 0.5rem;
+  }
+  &__slogan {
+    font-size: 1.4rem;
+  }
+
+  &__news {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  &__newsletter {
+    padding: 2rem 2rem;
+    width: 100%;
+    border-radius: 4rem;
+    background-color: $color-red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .news__title {
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+  }
+  .slide {
+    &__image {
+      width: 60%;
+    }
+    &__title {
+      text-align: center;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+// Components
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__input {
+    font-size: 1.6rem;
+    padding: 1.5rem;
+    margin-right: -2rem;
+    border: none;
+    border-radius: 3rem 0 0 3rem;
+  }
+}
+.new {
+  display: flex;
+
+  &__left {
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__date-number {
+    color: #bbb;
+    font-size: 10rem;
+  }
+  &__right {
+    flex: 1;
+  }
+  &__title {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+  }
+  &__text {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    max-width: 35ch;
+    color: #777;
+  }
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border: 1px solid $color-red;
+  }
+}
 .feature {
   border: 2px dotted #ddd;
   width: 300px;
@@ -279,7 +412,6 @@ body {
     transition: letter-spacing 0.3s ease;
   }
 }
-// components
 .trend {
   border-radius: 3rem;
   overflow: hidden;
@@ -457,7 +589,50 @@ body {
     padding: 4rem 2rem;
   }
 }
+.newsSwiper {
+  width: 100%;
 
+  .swiper-wrapper {
+    padding: 2rem;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #f6f7f8;
+    border-radius: 4rem;
+    overflow: hidden;
+
+    @media only screen and (max-width: 56.25em) {
+      flex-direction: column;
+      padding-bottom: 12rem;
+    }
+
+    &__image {
+      height: auto;
+      width: 30%;
+      margin: 0 auto;
+    }
+    &__title {
+      margin-bottom: 0.5rem;
+      font-size: 2.4rem;
+      color: #555;
+      font-weight: normal;
+    }
+    .list {
+      color: #999;
+      margin-bottom: 1rem;
+    }
+    &__price {
+      color: $color-red;
+    }
+    &__desc {
+      max-width: 40ch;
+    }
+  }
+}
 .slide {
   width: 48rem;
   position: relative;
@@ -482,14 +657,14 @@ body {
   &__image--rotated {
     position: absolute;
     top: 0;
-    left: 0;
-    transform: perspective(75rem) rotateY(90deg);
+    left: 50%;
+    transform: translateX(-50%) perspective(75rem) rotateY(90deg);
     opacity: 0;
     transition: transform 0.5s ease, opacity 0.5s ease;
   }
   &:hover &__image--rotated {
     opacity: 1;
-    transform: perspective(75rem) rotateY(0deg);
+    transform: translateX(-50%) perspective(75rem) rotateY(0deg);
   }
   &__footer {
     display: flex;

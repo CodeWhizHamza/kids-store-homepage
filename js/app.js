@@ -28,6 +28,24 @@ const homeSwiper = runSwiper(".homeSwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+const newsSwiper = runSwiper(".newsSwiper", {
+  grabCursor: true,
+  slidesPerView: 1,
+  centeredSlides: true,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination-news",
+    clickable: true,
+  },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next-news",
+    prevEl: ".swiper-button-prev-news",
+  },
+});
 const productsSwiper = runSwiper(".productsSwiper", {
   slidesPerView: 1,
   spaceBetween: 10,

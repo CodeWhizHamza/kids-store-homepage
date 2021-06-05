@@ -27,7 +27,7 @@
     <script defer src="/js/app.js"></script>
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="header__upper">
         <ul class="header__social">
           <a href="#" class="header__social-link">
@@ -112,8 +112,8 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
       </div>
-    </header> -->
-    <!-- <section class="trending">
+    </header>
+    <section class="trending">
       <h2 class="trending__heading">Trending Product</h2>
       <p class="trending__slogan">Kids Soft Toystore</p>
       <ul class="list">
@@ -329,8 +329,8 @@
           />
         </div>
       </div>
-    </section> -->
-    <!-- <section class="features">
+    </section>
+    <section class="features">
       <div class="features__width">
         <article class="feature">
           <img
@@ -369,6 +369,265 @@
           <p class="feature__text">Support System 24/7</p>
         </article>
       </div>
-    </section> -->
+    </section>
+
+    <section class="news">
+      <div
+        style="grid-area: news-title"
+        class="news__header news__header--left"
+      >
+        <h2 class="news__title">Latest News</h2>
+        <p class="news__slogan">Kids Soft Toystore</p>
+      </div>
+      <div
+        style="grid-area: product-title"
+        class="news__header news__header--right"
+      >
+        <h2 class="news__title">Deal of the Day</h2>
+        <p class="news__slogan">Kids Soft Toystore</p>
+      </div>
+      <div style="grid-area: news" class="news__news">
+        <article class="new">
+          <div class="new__left">
+            <span class="new__date-number">21</span>
+            <span class="new__date-text">MAY</span>
+          </div>
+          <div class="new__right">
+            <h4 class="new__title">Upon Seasons</h4>
+            <p class="new__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+              blanditiis dolor dolore corporis nostrum voluptatibus...
+            </p>
+            <button class="btn btn--yellow">Read More</button>
+          </div>
+        </article>
+        <article class="new">
+          <div class="new__left">
+            <span class="new__date-number">21</span>
+            <span class="new__date-text">MAY</span>
+          </div>
+          <div class="new__right">
+            <h4 class="new__title">Upon Seasons</h4>
+            <p class="new__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+              blanditiis dolor dolore corporis nostrum voluptatibus...
+            </p>
+            <button class="btn btn--yellow">Read More</button>
+          </div>
+        </article>
+      </div>
+      <div
+        style="grid-area: large-swiper"
+        class="news__featuring swiper-container newsSwiper"
+      >
+        <div class="swiper-wrapper">
+          <article class="swiper-slide">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0199/7497/9684/products/2_0d245058-edcf-4862-8cf5-5bd700711639_370x370.png?v=1621591062"
+              alt=""
+              class="swiper-slide__image"
+            />
+            <div class="swiper-slide__text">
+              <h4 class="swiper-slide__title">Aroma Mocha babystore</h4>
+              <ul class="list">
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </ul>
+              <p class="swiper-slide__price">&dollar;50.00</p>
+              <p class="swiper-slide__desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
+                earum.
+              </p>
+            </div>
+          </article>
+          <article class="swiper-slide">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0199/7497/9684/products/2_0d245058-edcf-4862-8cf5-5bd700711639_370x370.png?v=1621591062"
+              alt=""
+              class="swiper-slide__image"
+            />
+            <div class="swiper-slide__text">
+              <h4 class="swiper-slide__title">Aroma Mocha babystore</h4>
+              <ul class="list">
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </ul>
+              <p class="swiper-slide__price">&dollar;50.00</p>
+              <p class="swiper-slide__desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
+                earum.
+              </p>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-pagination swiper-pagination-news"></div>
+        <div class="swiper-button-next swiper-button-next-news"></div>
+        <div class="swiper-button-prev swiper-button-prev-news"></div>
+      </div>
+      <div style="grid-area: newsletter" class="news__newsletter">
+        <h4 class="news__title">
+          <span class="fas fa-envelope"></span>&nbsp;&nbsp;Newsletter
+        </h4>
+        <form action="#" class="form">
+          <div class="form__group">
+            <input
+              type="text"
+              placeholder="Enter your email"
+              class="form__input"
+            />
+            <button class="btn btn--yellow">Subscribe</button>
+          </div>
+        </form>
+      </div>
+      <div
+        style="grid-area: small-swiper"
+        class="news__products swiper-container productsSwiper"
+      >
+        <div class="swiper-wrapper">
+          <article class="swiper-slide slide">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0199/7497/9684/products/2_385402f5-8ac2-4bd3-82c2-fac9d2675787_370x370.png?v=1621591122"
+              alt=""
+              class="slide__image"
+            />
+            <img
+              src="https://cdn.shopify.com/s/files/1/0199/7497/9684/products/1_d3eb84f5-ce12-443f-a5e0-7911a192f47e_370x370.png?v=1621591122"
+              alt=""
+              class="slide__image slide__image--rotated"
+            />
+
+            <footer class="slide__footer">
+              <h3 class="slide__title">Crinkle Leaf Babystore</h3>
+              <p class="slide__price">&dollar;60.00</p>
+            </footer>
+          </article>
+          <article class="swiper-slide slide">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0199/7497/9684/products/2_385402f5-8ac2-4bd3-82c2-fac9d2675787_370x370.png?v=1621591122"
+              alt=""
+              class="slide__image"
+            />
+            <img
+              src="https://cdn.shopify.com/s/files/1/0199/7497/9684/products/1_d3eb84f5-ce12-443f-a5e0-7911a192f47e_370x370.png?v=1621591122"
+              alt=""
+              class="slide__image slide__image--rotated"
+            />
+
+            <footer class="slide__footer">
+              <h3 class="slide__title">Crinkle Leaf Babystore</h3>
+              <p class="slide__price">&dollar;60.00</p>
+            </footer>
+          </article>
+          <article class="swiper-slide slide">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0199/7497/9684/products/2_385402f5-8ac2-4bd3-82c2-fac9d2675787_370x370.png?v=1621591122"
+              alt=""
+              class="slide__image"
+            />
+            <img
+              src="https://cdn.shopify.com/s/files/1/0199/7497/9684/products/1_d3eb84f5-ce12-443f-a5e0-7911a192f47e_370x370.png?v=1621591122"
+              alt=""
+              class="slide__image slide__image--rotated"
+            />
+
+            <footer class="slide__footer">
+              <h3 class="slide__title">Crinkle Leaf Babystore</h3>
+              <p class="slide__price">&dollar;60.00</p>
+            </footer>
+          </article>
+          <article class="swiper-slide slide">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0199/7497/9684/products/2_385402f5-8ac2-4bd3-82c2-fac9d2675787_370x370.png?v=1621591122"
+              alt=""
+              class="slide__image"
+            />
+            <img
+              src="https://cdn.shopify.com/s/files/1/0199/7497/9684/products/1_d3eb84f5-ce12-443f-a5e0-7911a192f47e_370x370.png?v=1621591122"
+              alt=""
+              class="slide__image slide__image--rotated"
+            />
+
+            <footer class="slide__footer">
+              <h3 class="slide__title">Crinkle Leaf Babystore</h3>
+              <p class="slide__price">&dollar;60.00</p>
+            </footer>
+          </article>
+          <article class="swiper-slide slide">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0199/7497/9684/products/2_385402f5-8ac2-4bd3-82c2-fac9d2675787_370x370.png?v=1621591122"
+              alt=""
+              class="slide__image"
+            />
+            <img
+              src="https://cdn.shopify.com/s/files/1/0199/7497/9684/products/1_d3eb84f5-ce12-443f-a5e0-7911a192f47e_370x370.png?v=1621591122"
+              alt=""
+              class="slide__image slide__image--rotated"
+            />
+
+            <footer class="slide__footer">
+              <h3 class="slide__title">Crinkle Leaf Babystore</h3>
+              <p class="slide__price">&dollar;60.00</p>
+            </footer>
+          </article>
+          <article class="swiper-slide slide">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0199/7497/9684/products/2_385402f5-8ac2-4bd3-82c2-fac9d2675787_370x370.png?v=1621591122"
+              alt=""
+              class="slide__image"
+            />
+            <img
+              src="https://cdn.shopify.com/s/files/1/0199/7497/9684/products/1_d3eb84f5-ce12-443f-a5e0-7911a192f47e_370x370.png?v=1621591122"
+              alt=""
+              class="slide__image slide__image--rotated"
+            />
+
+            <footer class="slide__footer">
+              <h3 class="slide__title">Crinkle Leaf Babystore</h3>
+              <p class="slide__price">&dollar;60.00</p>
+            </footer>
+          </article>
+          <article class="swiper-slide slide">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0199/7497/9684/products/2_385402f5-8ac2-4bd3-82c2-fac9d2675787_370x370.png?v=1621591122"
+              alt=""
+              class="slide__image"
+            />
+            <img
+              src="https://cdn.shopify.com/s/files/1/0199/7497/9684/products/1_d3eb84f5-ce12-443f-a5e0-7911a192f47e_370x370.png?v=1621591122"
+              alt=""
+              class="slide__image slide__image--rotated"
+            />
+
+            <footer class="slide__footer">
+              <h3 class="slide__title">Crinkle Leaf Babystore</h3>
+              <p class="slide__price">&dollar;60.00</p>
+            </footer>
+          </article>
+          <article class="swiper-slide slide">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0199/7497/9684/products/2_385402f5-8ac2-4bd3-82c2-fac9d2675787_370x370.png?v=1621591122"
+              alt=""
+              class="slide__image"
+            />
+            <img
+              src="https://cdn.shopify.com/s/files/1/0199/7497/9684/products/1_d3eb84f5-ce12-443f-a5e0-7911a192f47e_370x370.png?v=1621591122"
+              alt=""
+              class="slide__image slide__image--rotated"
+            />
+
+            <footer class="slide__footer">
+              <h3 class="slide__title">Crinkle Leaf Babystore</h3>
+              <p class="slide__price">&dollar;60.00</p>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
